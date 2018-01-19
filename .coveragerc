@@ -1,0 +1,5 @@
+[run]
+include = gameye_database_viewer/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
