@@ -14,10 +14,9 @@ A database viewer for exported game databases generated using the GAMEYE mobile 
 Docker
 ------
 
-Docker support has recently been added. Build command:
+Docker support has recently been added. Build command::
 
-.. code-block:: bash
-    docker build -t gameye_database_viewer .
+    $ docker build -t gameye_database_viewer .
 
 Settings
 --------
