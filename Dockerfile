@@ -1,7 +1,5 @@
 FROM python:alpine
 
-VOLUME /usr/local/lib/python3.6/site-packages
-
 WORKDIR /code
 
 RUN apk add --no-cache \
@@ -17,6 +15,8 @@ RUN apk add --no-cache \
 COPY ./requirements.txt .
 COPY ./requirements/ ./requirements
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements/local.txt
 
 COPY . /code
+
+EXPOSE 8080

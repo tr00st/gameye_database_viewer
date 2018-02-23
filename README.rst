@@ -14,9 +14,19 @@ A database viewer for exported game databases generated using the GAMEYE mobile 
 Docker
 ------
 
-Docker support has recently been added. Build command::
+Docker support has recently been added. Make sure to build an environment file that points to your DB (assumed to run on the host here)
+
+Build command::
 
     $ docker build -t gameye_database_viewer .
+
+DB migration::
+
+    $ docker run -it --rm --env-file env.dockerlocal --add-host=database:172.17.0.1 gameye_database_viewer python3.6 manage.py migrate
+
+Dev server run::
+
+    $ docker run -it --rm --env-file env.dockerlocal --add-host=database:172.17.0.1 -p 8080:8080 gameye_database_viewer python3.6 manage.py runserver 0.0.0.0:8080
 
 Settings
 --------

@@ -2,12 +2,7 @@
 #	production that aren't in development.
 -r base.txt
 
-
-
-# WSGI Handler
-# ------------------------------------------------
-gevent==1.2.2
-gunicorn==19.7.1
+# Gunicorn for WSGI is now in base.txt
 
 # Static and Media Storage
 # ------------------------------------------------
